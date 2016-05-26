@@ -1,0 +1,14 @@
+<!-- <ul>
+<% for(var i=0; i<adlogs.length; i++) {%>
+   <li><%= adlogs[i].adPosition + ' -- ' + adlogs[i].adLoadTime %></li>
+<% } %>
+</ul> -->
+<!-- <%= adlogs %> -->
+<div> HOLA </div>
+<ul>
+<% adlogs.forEach(function(adlog, index){ %>
+	<li>
+    <%= adlog.adPosition + ' - ' + adlog.adLoadTime + ' - ' + adlog.createdAt %>
+  </li>
+<% }) %>
+</ul>

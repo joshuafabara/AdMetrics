@@ -1,0 +1,20 @@
+<!-- views/foo/bar.ejs -->
+<!-- <%= sails.config.myconf.name %>
+<%= sails.config.myconf.author %>
+<%= sails.config.myconf.timeoutToStoreCalls.oas %> -->
+<% if(typeof success !== 'undefined' && success) { %>
+  <div class="messages">
+    <%= success %>
+  </div>
+<% } %>
+<div class="form-container">
+  <form action="/config/change" method="POST" class="config-form">
+    <div class="inputs-container">
+      <div class="form-label">Timeout for logging new calls<span class="required-symbol">*</span></div><input class="config-input long-input" required type="number" name="Config[oas]" value="<%= sails.config.myconf.timeoutToStoreCalls.oas %>">
+    </div>
+    <div class="last-text-container">
+      <input type="submit" class="button" value="Change">
+    </div>
+  </form>
+</div>
+
